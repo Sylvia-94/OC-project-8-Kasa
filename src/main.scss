@@ -1,0 +1,19 @@
+@import "./styles/variables";
+@import "./styles/mediaqueries";
+@import "./styles/keyframes";
+
+@import "./styles/reset";
+@import "./styles/fonts";
+
+@import "./Components/Header/header";
+@import "./Components/Coverimg/cover-img";
+@import "./Components/GalleryProducts/gallery-products";
+@import "./Components/Card/card";
+@import "./Components/Footer/footer";
+
+@import "./Pages/Home/home";
+@import "./Pages/About/about";
+@import "./Pages/Productpage/productpage";
+@import "./Pages/ErrorPage/error-page";
+@import "./Components/Product/product";
+@import "./Components/Collapsible/collapsible";

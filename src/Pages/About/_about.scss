@@ -1,0 +1,18 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px $PaddingSides 30px $PaddingSides;
+  max-width: 100%;
+  .collapsible-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    width: 80%;
+    background-color: pink;
+  }
+}

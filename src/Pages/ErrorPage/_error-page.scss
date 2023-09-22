@@ -1,0 +1,38 @@
+.errorpg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $TextColor2;
+  gap: 140px;
+  .four-o-four {
+    font-weight: 700;
+    font-size: 288px;
+  }
+  .errormsg {
+    font-size: 36px;
+    font-weight: 500;
+    padding-top: 40px;
+  }
+  .homelink {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline solid $TextColor2;
+    padding-bottom: 140px;
+  }
+}
+
+@include mobile {
+  .errorpg {
+    gap: 113px;
+    .four-o-four {
+      padding-top: 113px;
+      font-size: 96px;
+    }
+    .errormsg {
+      font-size: 19px;
+      text-align: center;
+      line-break: auto;
+    }
+  }
+}

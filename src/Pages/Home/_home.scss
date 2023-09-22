@@ -1,0 +1,19 @@
+.home {
+  padding: 0px $PaddingSides 45px $PaddingSides;
+  .cover-txt {
+    position: absolute;
+    z-index: 2;
+    color: $TextColor1;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+}
+
+@include mobile {
+  .home {
+    padding: 0px 20px 0px 20px;
+  }
+}

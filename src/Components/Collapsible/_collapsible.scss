@@ -1,0 +1,17 @@
+.button-container {
+  max-width: 100%;
+  .togglebtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: $TextColor2;
+    border-radius: 5%;
+    cursor: pointer;
+    padding: 0px 15px;
+    color: white;
+    font-size: 24px;
+  }
+}

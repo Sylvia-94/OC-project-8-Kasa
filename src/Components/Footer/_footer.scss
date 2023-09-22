@@ -1,0 +1,30 @@
+.background {
+  width: 100%;
+  height: 115px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+  .mentions {
+    color: white;
+    font-size: 24px;
+  }
+}
+
+@include mobile {
+  .background {
+    width: 100%;
+    height: 210px;
+    .logo-white {
+      height: 39px;
+      width: 122px;
+    }
+    .mentions {
+      font-size: 12px;
+      padding: 0px 100px 0px 100px;
+      text-align: center;
+    }
+  }
+}

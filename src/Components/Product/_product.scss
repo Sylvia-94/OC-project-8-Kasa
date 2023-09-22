@@ -1,0 +1,83 @@
+.product-imgs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 415px;
+  background-color: pink;
+  border-radius: 25px;
+
+  .arrows {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 80%;
+  }
+  .slider {
+    position: absolute;
+    bottom: 25px;
+    color: white;
+  }
+}
+
+.product-titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: $TextColor2;
+  padding-top: 20px;
+  .name-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 10px;
+    .name {
+      font-weight: 500;
+      font-size: 36px;
+    }
+    .location {
+      font-size: 18px;
+    }
+  }
+  .host {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    .host-name {
+      font-size: 18px;
+    }
+  }
+}
+
+.tags-ratings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  .tags {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    .tag {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      height: 25px;
+      background-color: $TextColor2;
+      color: $TextColor1;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+  }
+}

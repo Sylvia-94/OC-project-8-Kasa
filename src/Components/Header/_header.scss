@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 45px $PaddingSides 0px $PaddingSides;
+  box-sizing: border-box;
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 55px;
+    color: $TextColor2;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    .link:hover {
+      text-decoration-line: underline;
+    }
+    .link-mobile {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 0px 20px;
+    gap: 10%;
+    .logo {
+      height: 47px;
+      width: 145px;
+    }
+    .navigation {
+      font-size: 12px;
+      gap: 20px;
+      .link {
+        display: none;
+      }
+      .link-mobile {
+        display: block;
+      }
+    }
+  }
+}
