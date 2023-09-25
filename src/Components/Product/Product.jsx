@@ -1,7 +1,6 @@
 import React from "react";
 
-const Product = ({ product }) => {
-  const { title, location } = product;
+const Product = ({ props }) => {
   return (
     <div>
       <div className="product-imgs">
@@ -19,8 +18,8 @@ const Product = ({ product }) => {
       </div>
       <div className="product-titles">
         <div className="name-location">
-          <h1 className="name">{title}</h1>
-          <h2 className="location">{location}</h2>
+          <h1 className="name">{props.title}</h1>
+          <h2 className="location">texte</h2>
         </div>
         <div className="host">
           <h2 className="host-name">Name</h2>

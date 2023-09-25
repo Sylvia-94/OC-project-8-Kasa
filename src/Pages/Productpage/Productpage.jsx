@@ -1,51 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Product from "../../Components/Product/Product";
 import Collapsible from "../../Components/Collapsible/Collapsible";
+import { useFetch } from "../../utils/hooks/useFetch";
 import { useParams } from "react-router-dom";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 const Productpage = () => {
-  const [data, setData] = useState();
+  const { data } = useFetch("data.json");
+  const id = useParams("/product/");
 
-  const getData = () => {
-    fetch(
-      "data/data.json",
+  // Passage de la data d'un objet à un tableau pour utiliser le mapping
+  const arrayOfData = [];
 
-      {
-        headers: {
-          "Content-Type": "application/json",
+  // Boucle forEach pour remplir le nouveau tableau avec chaque key de la data
+  Object.keys(data).forEach((key) => {
+    arrayOfData.push(data[key]);
+  });
 
-          Accept: "application/json",
-        },
-      }
-    )
-      .then(function (response) {
-        return response.json();
-      })
+  const selectedProduct = arrayOfData.find((d) => d.id === id.id);
 
-      .then(function (myJson) {
-        setData(myJson);
-      });
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-  const { id } = useParams();
-
-  // useEffect pour fetch les données jusque ici, soit fichier service.js à importer, soit directement dans le composant, avec une fonction pour fetch la data
-
-  const selectedProduct = data?.find((item) => item.id === id);
-
-  console.log("selectedProduct", selectedProduct);
-
-  console.log(data);
-
-  return (
-    <div className="product-page">
-      <Product product={selectedProduct} />
-      <Collapsible />
-    </div>
-  );
+  if (selectedProduct) {
+    return (
+      <div className="product-page">
+        <Product props={selectedProduct} />
+        <Collapsible />
+      </div>
+    );
+  } else {
+    <ErrorPage />;
+  }
 };
 
 export default Productpage;

@@ -13,7 +13,7 @@ function App() {
 
   const getData = () => {
     fetch(
-      "data/data.json",
+      "data.json",
 
       {
         headers: {
