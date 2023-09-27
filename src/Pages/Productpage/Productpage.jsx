@@ -25,6 +25,7 @@ const Productpage = () => {
       <div className="product-page">
         <Slider props={selectedProduct.pictures} />
         <Product props={selectedProduct} />
+
         <Collapsible />
       </div>
     );

@@ -10,17 +10,18 @@ const Product = ({ props }) => {
         </div>
         <div className="host">
           <h2 className="host-name">{props.host.name}</h2>
-          <div className="circle-photo">photo</div>
+          <img
+            src={props.host.picture}
+            className="circle-photo"
+            alt="host portrait"
+          ></img>
         </div>
       </div>
       <div className="tags-ratings">
         <div className="tags">
-          <div className="tag">Cozy</div>
-          <div className="tag">Canal</div>
-          <div className="tag">Paris 10</div>
-        </div>
-        <div className="ratings">
-          <p>☆☆☆☆☆</p>
+          {props.tags.map((tag) => {
+            return <div className="tag">{tag}</div>;
+          })}
         </div>
       </div>
     </div>
