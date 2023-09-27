@@ -13,11 +13,8 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    .link:hover {
+    a.active {
       text-decoration-line: underline;
-    }
-    .link-mobile {
-      display: none;
     }
   }
 }
@@ -33,15 +30,10 @@
       height: 47px;
       width: 145px;
     }
-    .navigation {
+    .navigation a {
       font-size: 12px;
       gap: 20px;
-      .link {
-        display: none;
-      }
-      .link-mobile {
-        display: block;
-      }
+      text-transform: uppercase;
     }
   }
 }

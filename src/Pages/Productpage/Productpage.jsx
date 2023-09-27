@@ -26,7 +26,7 @@ const Productpage = () => {
         <Slider props={selectedProduct.pictures} />
         <Product props={selectedProduct} />
 
-        <Collapsible />
+        <Collapsible list={true} />
       </div>
     );
   } else {

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-const Collapsible = ({ label, text }) => {
+const Collapsible = ({ label, text, list }) => {
+  console.log(list);
+  if (list) {
+    console.log("je s'appelle List");
+  }
   const [open, setOpen] = useState(false);
   const toggle = () => {
     setOpen(!open);

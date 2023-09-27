@@ -55,11 +55,8 @@ a {
   font-style: normal;
   font-weight: 500;
 }
-.header .navigation .link:hover {
+.header .navigation a.active {
   text-decoration-line: underline;
-}
-.header .navigation .link-mobile {
-  display: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 376px) {
@@ -74,15 +71,10 @@ a {
     height: 47px;
     width: 145px;
   }
-  .header .navigation {
+  .header .navigation a {
     font-size: 12px;
     gap: 20px;
-  }
-  .header .navigation .link {
-    display: none;
-  }
-  .header .navigation .link-mobile {
-    display: block;
+    text-transform: uppercase;
   }
 }
 .cover {

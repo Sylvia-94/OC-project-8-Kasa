@@ -1,4 +1,5 @@
 import React from "react";
+import Ratings from "../Ratings/Ratings";
 
 const Product = ({ props }) => {
   return (
@@ -23,6 +24,7 @@ const Product = ({ props }) => {
             return <div className="tag">{tag}</div>;
           })}
         </div>
+        <Ratings rating={props.rating} />
       </div>
     </div>
   );
