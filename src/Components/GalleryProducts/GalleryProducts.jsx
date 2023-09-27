@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const GalleryProducts = ({ data }) => {
   const cards = data?.map((item) => (
-    <Link to={`/product=${item.id}`} key={item.id}>
+    <Link to={`/product/${item.id}`} key={item.id}>
       <Card title={item.title} cover={item.cover} />
     </Link>
   ));

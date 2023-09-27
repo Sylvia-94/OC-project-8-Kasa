@@ -3,27 +3,14 @@ import React from "react";
 const Product = ({ props }) => {
   return (
     <div>
-      <div className="product-imgs">
-        <div className="arrows">
-          <div>
-            <img src="arrow-left.png" alt="flèche gauche" />
-          </div>
-          <div>
-            <img src="arrow-right.png" alt="flèche droite" />
-          </div>
-        </div>
-        <div className="slider">
-          <p>1/4</p>
-        </div>
-      </div>
       <div className="product-titles">
         <div className="name-location">
           <h1 className="name">{props.title}</h1>
-          <h2 className="location">texte</h2>
+          <h2 className="location">{props.location}</h2>
         </div>
         <div className="host">
-          <h2 className="host-name">Name</h2>
-          <div className="circle-photo">○</div>
+          <h2 className="host-name">{props.host.name}</h2>
+          <div className="circle-photo">photo</div>
         </div>
       </div>
       <div className="tags-ratings">
